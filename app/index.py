@@ -1,11 +1,15 @@
+import os
 import streamlit as st
 import hashlib
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Set page config
 st.set_page_config(page_title="Protected App", page_icon="🔒")
 
-# Password configuration (you can change this)
-CORRECT_PASSWORD = "123admin321"  # Change this to your desired password
+# Password configuration 
+CORRECT_PASSWORD = os.getenv("CORRECT_PASSWORD")  # Load password from environment variable
 
 def hash_password(password):
     """Hash password for security"""
