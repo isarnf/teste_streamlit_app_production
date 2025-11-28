@@ -2,3 +2,4 @@ venv
 /venv/*
 docker-compose.yml
 Dockerfile
+.env
